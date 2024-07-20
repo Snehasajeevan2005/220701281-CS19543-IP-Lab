@@ -6,29 +6,44 @@
         h1{
           background-color:black;
           color:white;
-          height:50px;
+        
+          
         } 
         h2{
           background-color:black;
           color:white;
-          height:20px;
           display:inline;
+          
         } 
         hr {  
             height: 4px;  
             background-color: black;  
-            border: none;  
-        }  
-        div.l{
-          float:left;
-        }
-        div.r{
-          float:right;
-        }
-       table,tr,td,th{
-        text-align:center;
-       }
+            border: none;
 
+           
+        }  
+       
+        table,tr,td,th{
+        
+        border:solid;
+       }
+      
+       
+        
+        .per,.extra{
+         
+          display:inline-block;
+          width:60%;  /*part of screen this div takes*/
+        }
+        .lang,.skillset{
+          float: right;  /*to keep the block right*/ 
+          width:20%;
+          margin-right:50px;/*from right move*/
+        
+        }
+        
+        
+       
        ul.a {list-style-type: square;
          }
     </style>  
@@ -37,8 +52,8 @@
 
 <body bgcolor="pink" >
 <h1><center><u><b>Resume</b></u></center></h1>
-<h1><b>SNEHA SAJEEVAN</b></h1>></h1>
-<img src="https://www.rajalakshmi.org/QRCode/img/220701281.jpg" border="5" alt="sneha" align="right" width="180" height="220">
+<h1 ><b>SNEHA SAJEEVAN</b></h1>></h1>
+<img src="https://www.rajalakshmi.org/QRCode/img/220701281.jpg" border="5" alt="sneha" align="right" width="180" height="210" style="margin-right:50px;">
 <h2><u>Educational details🎓</u></h2>
 <ul>
   <li>BE computer Science and Engineering<br>Rajalakshmi Engineeering College<br>cgpa: 9.11/10</li>
@@ -46,8 +61,10 @@
   <li>Secondary Education <br>ST Ursulas Anglo Indian Higher Secondary  School<br>91.4% </li>
 </ul>
 <hr>
-<h2><u>Personal Details</u></h2>
-<ul>
+<div class="section1">
+<div class="per">
+  <h2><u>Personal Details</u></h2>
+<ul >
   <li><u>contact no:</u> 6369574638</li>
   <li><u>dob:</u> 07/05/2005</li>
   <li> <u>address:</u>kaaviya flat b5 block<br> Ramasamy street <br> Gopalapuram <br>chennai 600086</li>
@@ -55,8 +72,22 @@
   <li><u>linkedin:</u>linkedin.com/in/snehasajeevan </li>
 </ul>
 </div>
+<div class="lang">
+  <h2><ins>Languages</ins></h2>
+  <ul class="a" >
+    <li>Tamil</li>
+    <li>Hindi</li>
+    <li>Malayalam</li>
+    <li>English</li>
+    <li>French</li>
+  </ul>
+</div>
+
+</div>
 <hr>
-<div class="l">
+<div class="section2">
+
+<div class="extra">
 <h2><u>ExtraCurriculum </u></h2>
 <table border="1">
   <tr>
@@ -113,7 +144,7 @@
     <td>Introduction to HTML</td>
     <td>July 13, 2024</td>
     <td>HTML</td>
-    <td><a href="img/infosyshtml.png">link</a><td>
+    <td><a href="img/infosyshtml.png">link</a></td>
   </tr>
   <tr>
     <td>Competion</td>
@@ -131,8 +162,11 @@
     <td>FrontEnd:Python <br> BackEnd:MySQL</td>
     <td><a href="https://github.com/Snehasajeevan2005/DBMS-CHARITY-MANAGEMENT-SYSTEM.git">link</a></td>
   </tr>
-</table></div>
-<div class="r">
+</table>
+</div>
+
+
+<div class="skillset">
 <h2><u>Skills</u></h2>
 <ul class="a" >
   <li>c</li>
@@ -151,10 +185,11 @@
   <li>Team Work</li>
 </ul>
 </div>
-
+</div>
+<hr>
 </body>
 </html>
 
-
-
+<!--<div>, <p>, <li>, <ul>, <form>, <table> are some of the inline tags
+  Inline Block so it occurs side by side by default-->
 
