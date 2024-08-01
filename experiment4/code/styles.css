@@ -1,0 +1,32 @@
+header{
+    background-color: rgba(91, 6, 104, 0.804);
+    text-align: center;
+    height:100px;
+}
+nav{
+    background-color:rgba(91, 6, 104, 0.804) ;
+    float:left;
+    line-height: 40px;
+    height:100%;
+    width: 15%;
+}
+a {
+    color: white;      
+   
+  }
+
+  a:hover {
+    color:black;
+  }
+
+ section{
+    margin-left: 200px;   /*RIGHT SIDE BODY*/
+ }
+
+ table, th, td,tr {
+    border-collapse: collapse;
+    border: 2px solid black;
+    padding:10px;
+    text-align: left;
+}
+ 
