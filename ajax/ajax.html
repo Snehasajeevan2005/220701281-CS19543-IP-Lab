@@ -1,0 +1,28 @@
+
+
+
+
+/;<!DOCTYPE html>
+<html>
+    <head>Simple Ajax Program</head>
+    <body>
+        <button  onclick="show()">Get Text File Data</button>
+        <div id="mes" >
+            
+        </div>
+        <script>
+            function show(){
+                var a=new XMLHttpRequest();
+                a.open("GET","rec.txt",true);
+                a.send();
+                a.onreadystatechange=function()
+                {
+                    if(this.readyState==4 && this.status==200)
+                    {
+                        document.getElementById("mes").innerHTML=this.responseText;
+                    };
+                }
+            }
+        </script>
+    </body>
+</html>
