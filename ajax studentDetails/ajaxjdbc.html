@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Students details</title>
+<style>
+.container{
+background-color:pink;
+border:solid 5px;
+text-align:center;
+margin:100px;
+padding:20px;
+height:600px;
+
+}
+</style>
+<script>
+function fetch()
+{
+	var reg=document.getElementById("n1").value;
+	var x= new XMLHttpRequest();
+	x.open("GET","ajaxjdbcServlet?q="+reg,true);  /*ajaxjdbcServlet?reg=281*/
+
+	x.onreadystatechange=function()
+	{
+		if(x.readyState==4 && x.status==200){
+			document.getElementById("content").innerHTML=x.responseText;
+		}
+	};
+	x.send();
+}
+</script>
+</head>
+<body>
+<div class="container">
+<h1>Students details</h1>
+<h2>Enter your Roll Number:</h2>
+<select id="n1" onchange="fetch()">  
+<option>Select</option>
+<option>281</option>
+<option>297</option>
+<option>296</option>
+<option>267</option>
+<option>281</option>
+</select>
+<div id="content"></div>
+</div>
+</body>
+</html>
