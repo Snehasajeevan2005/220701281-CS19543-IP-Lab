@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>Student Name Suggestion</title>
+    <style>
+    .container{
+    background-color:pink;
+    text-align:center;
+    width:200px;
+    height:350px;
+    margin-left:600px;
+    margin-top:150px;
+    padding:50px;
+    border:solid 5px;
+    }  
+    </style>
+    <script>
+        function suggestions(str) {
+            if (str.length === 0) {
+                document.getElementById("sug").innerHTML = "";
+                return;
+            }
+            var x = new XMLHttpRequest();
+            x.onreadystatechange = function() {
+                if (x.readyState == 4 && x.status == 200) {
+                    document.getElementById("sug").innerHTML = x.responseText;
+                }
+            }
+            x.open("GET", "ajax2Servlet?q=" + str, true);
+            x.send();
+        }
+    </script>
+</head>
+<body>
+<div class="container">
+    <h2>Student Name Suggestion</h2>
+    <input type="text" onkeyup="suggestions(this.value)" placeholder="Enter student name" >
+    <div id="sug"></div>
+</div>
+</body>
+</html>
